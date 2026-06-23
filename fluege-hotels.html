@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flüge &amp; Hotels - Yorika Travel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#819986",
+                      "on-primary-fixed-variant": "#364c3c",
+                      "inverse-primary": "#b4cdb8",
+                      "outline-variant": "#c3c8c1",
+                      "error": "#ba1a1a",
+                      "on-error-container": "#93000a",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#4d6453",
+                      "on-error": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "surface-container-highest": "#e5e2e1",
+                      "bronze-gold": "#C5A059",
+                      "secondary-fixed-dim": "#e9c176",
+                      "surface-container": "#f0eded",
+                      "on-background": "#1c1b1b",
+                      "forest-green": "#1B3022",
+                      "tertiary-fixed-dim": "#c9c6c2",
+                      "on-tertiary-fixed": "#1c1c19",
+                      "inverse-on-surface": "#f3f0ef",
+                      "surface-bright": "#fcf9f8",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "primary-fixed": "#d0e9d4",
+                      "surface-white": "#FFFFFF",
+                      "on-secondary-fixed": "#261900",
+                      "surface": "#fcf9f8",
+                      "inverse-surface": "#313030",
+                      "tertiary": "#171815",
+                      "secondary-fixed": "#ffdea5",
+                      "outline": "#737973",
+                      "primary": "#061b0e",
+                      "surface-dim": "#dcd9d9",
+                      "on-secondary-container": "#785a1a",
+                      "on-surface": "#1c1b1b",
+                      "primary-container": "#1b3022",
+                      "error-container": "#ffdad6",
+                      "background": "#fcf9f8",
+                      "surface-container-low": "#f6f3f2",
+                      "charcoal": "#1A1A1A",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#0b2013",
+                      "on-surface-variant": "#434843",
+                      "on-tertiary-fixed-variant": "#474743",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#95938f",
+                      "warm-beige": "#F5F2ED",
+                      "tertiary-fixed": "#e5e2dd",
+                      "tertiary-container": "#2c2c29",
+                      "secondary": "#775a19",
+                      "surface-variant": "#e5e2e1",
+                      "primary-fixed-dim": "#b4cdb8",
+                      "secondary-container": "#fed488",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "margin-desktop": "48px",
+                      "section-gap": "80px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "EB Garamond"
+                      ],
+                      "display-lg-mobile": [
+                              "EB Garamond"
+                      ],
+                      "headline-sm": [
+                              "EB Garamond"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg": [
+                              "56px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-warm-beige text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface-white dark:bg-charcoal docked full-width top-0 sticky z-50 shadow-sm text-forest-green dark:text-inverse-primary w-full">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="text-headline-sm font-headline-sm font-bold text-forest-green dark:text-inverse-primary">
+                Yorika Travel
+            </div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="index.html">Startseite</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="ueber-uns.html">Über uns</a>
+<a class="text-forest-green dark:text-inverse-primary border-b-2 border-bronze-gold pb-1 font-bold text-label-md font-label-md scale-95 transition-transform duration-150" href="reiseangebote.html">Reiseangebote</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="pilgerreisen.html">Pilgerreisen &amp; Umrah</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="kontakt.html">Kontakt</a>
+</nav>
+<div class="hidden md:flex items-center gap-base">
+<button class="text-label-md font-label-md text-on-surface-variant hover:text-bronze-gold transition-colors duration-200" onclick="alert('Englische Version folgt demnächst.')" onclick="alert('Englische Version folgt demnächst.')">DE / EN</button>
+<a class="bg-forest-green text-surface-white px-4 py-2 rounded-lg text-label-md font-label-md hover:bg-forest-green/90 transition-colors" href="beratung.html">Beratung buchen</a>
+</div>
+<button class="md:hidden text-forest-green">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] min-h-[400px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-charcoal/20 z-10"></div>
+<div class="absolute inset-0 w-full h-full bg-cover bg-center" data-alt="A luxurious, high-end hotel room with a spectacular view of a vibrant cityscape at dusk. The room is warmly lit, highlighting premium textures like velvet and polished wood. Outside the window, a plane is subtly visible in the twilight sky, symbolizing travel. The overall mood is sophisticated, warm, and inviting, reflecting a 'Levantine Elegance' aesthetic with modern corporate polish." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDC2FFD3dhSQ-zhDtwEfgvX9urcUCvsDpVTNNu_jFdDZaCElolb9N-cOc9CIqpuY2IUffsO_b2aiAl_KYi5jGROHsldYHJb2IPcUIhGOStYr0EMAsbk1C0vkGcYNaiKvHdGB3QoPxDLdxycIskSW8Ypka8n_UdZ1MAU9OKm__1i3nEItJJ1REkMctO5cpiufetTaqSe7x0A3Byy8Xpl_sL8gdtvvusCwfbIfvg2o3gP2GVMZI6IxvyMzLOZhpgwVXaFZaixNM2t0Y')"></div>
+<div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-surface-white mb-6 drop-shadow-md">Flüge &amp; Hotels</h1>
+<p class="text-body-lg font-body-lg text-surface-white/90 drop-shadow-sm">Maßgeschneiderte Reiseplanung für höchste Ansprüche. Wir verbinden Sie mit den besten Destinationen weltweit.</p>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-headline-md font-headline-md text-forest-green mb-4">Unsere Services</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl mx-auto">Entdecken Sie unser umfassendes Angebot für eine sorgenfreie und komfortable Reise.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Card 1 -->
+<div class="bg-surface-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-warm-beige flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-bronze-gold text-2xl" style="font-variation-settings: 'FILL' 1;">flight</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-forest-green mb-3">Flugtickets</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Weltweite Verbindungen mit renommierten Airlines. Wir finden die besten Routen und Tarife für Sie.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-warm-beige flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-bronze-gold text-2xl" style="font-variation-settings: 'FILL' 1;">hotel</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-forest-green mb-3">Hotels</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Von Boutique-Hotels bis hin zu luxuriösen Resorts. Handverlesene Unterkünfte für jeden Geschmack.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-warm-beige flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-bronze-gold text-2xl" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-forest-green mb-3">Transfers</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Zuverlässige und komfortable Transfers vom Flughafen zum Hotel und zurück. Entspannt ankommen.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-warm-beige flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-bronze-gold text-2xl" style="font-variation-settings: 'FILL' 1;">map</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-forest-green mb-3">Reiseplanung</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-4">Individuelle Beratung und komplette Organisation Ihrer Reise. Wir kümmern uns um die Details.</p>
+</div>
+</div>
+</section>
+<!-- Inquiry Form Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-4xl mx-auto bg-surface-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row">
+<!-- Form Side -->
+<div class="w-full md:w-3/5 p-8 md:p-12">
+<h2 class="text-headline-md font-headline-md text-forest-green mb-2">Reiseanfrage</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-8">Teilen Sie uns Ihre Wünsche mit. Wir erstellen Ihnen ein unverbindliches Angebot.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase mb-2" for="name">Name</label>
+<input class="w-full border-charcoal/20 rounded-md focus:border-forest-green focus:ring-1 focus:ring-forest-green transition-colors bg-surface-white text-body-md p-3" id="name" placeholder="Ihr Name" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase mb-2" for="email">E-Mail</label>
+<input class="w-full border-charcoal/20 rounded-md focus:border-forest-green focus:ring-1 focus:ring-forest-green transition-colors bg-surface-white text-body-md p-3" id="email" placeholder="ihre@email.de" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase mb-2" for="destination">Reiseziel</label>
+<input class="w-full border-charcoal/20 rounded-md focus:border-forest-green focus:ring-1 focus:ring-forest-green transition-colors bg-surface-white text-body-md p-3" id="destination" placeholder="Wohin soll es gehen?" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase mb-2" for="dates">Reisezeitraum</label>
+<input class="w-full border-charcoal/20 rounded-md focus:border-forest-green focus:ring-1 focus:ring-forest-green transition-colors bg-surface-white text-body-md p-3" id="dates" placeholder="z.B. Oktober 2024" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase mb-2" for="services">Gewünschte Services</label>
+<div class="flex flex-wrap gap-3">
+<label class="inline-flex items-center bg-warm-beige px-4 py-2 rounded-full cursor-pointer hover:bg-forest-green/10 transition-colors">
+<input class="form-checkbox text-forest-green rounded border-charcoal/30 focus:ring-forest-green" type="checkbox"/>
+<span class="ml-2 text-label-md font-label-md text-forest-green">Flug</span>
+</label>
+<label class="inline-flex items-center bg-warm-beige px-4 py-2 rounded-full cursor-pointer hover:bg-forest-green/10 transition-colors">
+<input class="form-checkbox text-forest-green rounded border-charcoal/30 focus:ring-forest-green" type="checkbox"/>
+<span class="ml-2 text-label-md font-label-md text-forest-green">Hotel</span>
+</label>
+<label class="inline-flex items-center bg-warm-beige px-4 py-2 rounded-full cursor-pointer hover:bg-forest-green/10 transition-colors">
+<input class="form-checkbox text-forest-green rounded border-charcoal/30 focus:ring-forest-green" type="checkbox"/>
+<span class="ml-2 text-label-md font-label-md text-forest-green">Transfer</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase mb-2" for="details">Weitere Details</label>
+<textarea class="w-full border-charcoal/20 rounded-md focus:border-forest-green focus:ring-1 focus:ring-forest-green transition-colors bg-surface-white text-body-md p-3" id="details" placeholder="Haben Sie besondere Wünsche?" rows="4"></textarea>
+</div>
+<button class="w-full bg-forest-green text-surface-white py-3 rounded-lg text-label-md font-label-md hover:bg-forest-green/90 transition-colors shadow-sm mt-4" type="submit">
+                            Anfrage Senden
+                        </button>
+</form>
+</div>
+<!-- Image Side -->
+<div class="hidden md:block w-2/5 bg-cover bg-center" data-alt="A beautifully arranged travel flat lay on a warm marble surface. It includes a premium leather passport cover, elegant sunglasses, a vintage brass compass, and a sleek modern smartphone showing a map. Soft, natural sunlight filters in, creating gentle shadows. The color palette is warm, featuring rich browns, subtle golds, and crisp whites, perfectly aligning with a sophisticated 'Levantine Elegance' travel aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD13TQikK9ekBVH19WarbKg4u1g5d1_yUUmbamAWJk3cYtTDaLpbLw7fruOw9uUkAZ9mJ1XJD3Wti9rMB_ROlmyQjiz536seEC4MQvLtbyvwfuIOlxi7Ht0or-uriC9e3mtG3kuHUkySQe4jcXiSZnAdzo4DgmAy-dWK26LpIE8o5VTzPllCLz02CcvthzlwkXwXjpHWWAxJ6l2XsnM_w5IMur2ATXp5CHPo0ctP6UwxWcmRVlvJI2REIF4aI2qqvq09VifRGkJo-Q')">
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-forest-green dark:bg-primary-container text-surface-white full-width w-full py-section-gap px-margin-mobile md:px-margin-desktop mt-auto">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-headline-sm font-headline-sm font-bold text-surface-white">
+                Yorika Travel
+            </div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-surface-white/80 hover:text-bronze-gold transition-colors duration-200 text-label-sm font-label-sm" href="#">Impressum</a>
+<a class="text-surface-white/80 hover:text-bronze-gold transition-colors duration-200 text-label-sm font-label-sm" href="#">Datenschutz</a>
+<a class="text-surface-white/80 hover:text-bronze-gold transition-colors duration-200 text-label-sm font-label-sm" href="#">Instagram</a>
+<a class="text-surface-white/80 hover:text-bronze-gold transition-colors duration-200 text-label-sm font-label-sm" href="#">Facebook</a>
+</nav>
+<div class="text-body-md font-body-md text-surface-white/60">
+                © 2024 Yorika Travel. Alle Rechte vorbehalten.
+            </div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('form').forEach(function(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var div = document.createElement('div');
+      div.style.cssText = 'padding:1.5rem;background:#1B3022;color:#F5F2ED;border-radius:.5rem;text-align:center;font-family:sans-serif;margin-top:1rem';
+      div.textContent = 'Vielen Dank! Wir melden uns in Kürze bei Ihnen. (Demo)';
+      form.replaceWith(div);
+    });
+  });
+});
+</script>
+</body></html>

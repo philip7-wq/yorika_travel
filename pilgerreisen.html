@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pilgerreisen &amp; Umrah - Yorika Travel</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config injected via instructions -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#819986",
+                    "on-primary-fixed-variant": "#364c3c",
+                    "inverse-primary": "#b4cdb8",
+                    "outline-variant": "#c3c8c1",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#4d6453",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "surface-container-highest": "#e5e2e1",
+                    "bronze-gold": "#C5A059",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-container": "#f0eded",
+                    "on-background": "#1c1b1b",
+                    "forest-green": "#1B3022",
+                    "tertiary-fixed-dim": "#c9c6c2",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "inverse-on-surface": "#f3f0ef",
+                    "surface-bright": "#fcf9f8",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary-fixed": "#d0e9d4",
+                    "surface-white": "#FFFFFF",
+                    "on-secondary-fixed": "#261900",
+                    "surface": "#fcf9f8",
+                    "inverse-surface": "#313030",
+                    "tertiary": "#171815",
+                    "secondary-fixed": "#ffdea5",
+                    "outline": "#737973",
+                    "primary": "#061b0e",
+                    "surface-dim": "#dcd9d9",
+                    "on-secondary-container": "#785a1a",
+                    "on-surface": "#1c1b1b",
+                    "primary-container": "#1b3022",
+                    "error-container": "#ffdad6",
+                    "background": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "charcoal": "#1A1A1A",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#0b2013",
+                    "on-surface-variant": "#434843",
+                    "on-tertiary-fixed-variant": "#474743",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#95938f",
+                    "warm-beige": "#F5F2ED",
+                    "tertiary-fixed": "#e5e2dd",
+                    "tertiary-container": "#2c2c29",
+                    "secondary": "#775a19",
+                    "surface-variant": "#e5e2e1",
+                    "primary-fixed-dim": "#b4cdb8",
+                    "secondary-container": "#fed488",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "margin-desktop": "48px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "label-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "label-sm": [
+                            "Hanken Grotesk"
+                    ],
+                    "display-lg": [
+                            "EB Garamond"
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "EB Garamond"
+                    ],
+                    "display-lg-mobile": [
+                            "EB Garamond"
+                    ],
+                    "headline-sm": [
+                            "EB Garamond"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "56px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-sm": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Subtle architectural background pattern */
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(27, 48, 34, 0.03) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+
+        /* Ambient Shadow Utility */
+        .shadow-ambient {
+            box-shadow: 0 10px 40px -10px rgba(27, 48, 34, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-warm-beige text-on-surface antialiased bg-pattern min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-white docked full-width top-0 sticky z-50 shadow-sm border-none">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand Logo -->
+<a class="text-headline-sm font-headline-sm font-bold text-forest-green tracking-tight" href="index.html">
+                Yorika Travel
+            </a>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="index.html">Startseite</a>
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="ueber-uns.html">Über uns</a>
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="reiseangebote.html">Reiseangebote</a>
+<a class="text-forest-green border-b-2 border-bronze-gold pb-1 font-bold hover:text-bronze-gold transition-colors duration-200" href="pilgerreisen.html">Pilgerreisen &amp; Umrah</a>
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="kontakt.html">Kontakt</a>
+</div>
+<!-- Trailing Actions -->
+<div class="hidden md:flex items-center space-x-6">
+<span class="text-label-md font-label-md text-on-surface-variant cursor-pointer hover:text-forest-green" style="cursor:pointer" onclick="alert('Englische Version folgt demnächst.')">DE / EN</span>
+<a class="bg-forest-green text-surface-white text-label-md font-label-md px-6 py-2.5 rounded-lg hover:bg-opacity-90 transition-all hover:scale-95 duration-150" href="beratung.html">
+                    Beratung buchen
+                </a>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-forest-green">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="relative w-full bg-forest-green text-surface-white py-16 md:py-24 overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-forest-green/60 z-10 mix-blend-multiply"></div>
+<div class="w-full h-full bg-cover bg-center opacity-80 mix-blend-luminosity" data-alt="A sweeping, majestic photograph of the Prophet's Mosque in Medina during twilight. The sky is a gradient of soft dusk colors. The architecture is illuminated with a warm, inviting glow. The image follows a Levantine Elegance style, utilizing premium architectural photography techniques to convey deep peace, spirituality, and exclusivity. Rich contrast between the dark sky and golden light." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZKemARys7KZ30PC6Aobw3AkLxVL3K5k7uPMNivo-0vG1cnZ5NKpW1Pk7t2D59AnLrtyUyYj90exZ_4fUf7atI8t9vUIDtL2rcwYqtkUFXm1_NA2T2EjzVjMcEiwXKJgHz7mZDgUJ_vGEVPoEyIUyM0cBmyLjXkiO-g0B6vAFO_Z5Uk7XWA6yD7D8nUUoVh5jbNEJ07pvMrnv6lp87DEjAjpAAbQAuHsx6L0PyaaemCOj5NrfbdPlHrYngA5snyL183b0DNMIaDn4')"></div>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<span class="inline-block px-4 py-1.5 mb-6 border border-bronze-gold/40 rounded-full text-label-sm font-label-sm text-secondary-fixed uppercase tracking-wider">
+                    Ihre Spirituelle Reise
+                </span>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg mb-6">
+                    Pilgerreisen &amp; Umrah
+                </h1>
+<p class="text-body-lg font-body-lg text-inverse-primary max-w-2xl mx-auto mb-10">
+                    Wir begleiten Sie auf Ihrem spirituellen Weg mit höchstem Komfort und tiefem Verständnis. Wählen Sie ein Paket aus und buchen Sie anschließend einen persönlichen Beratungstermin, um Ihre Reise individuell abzustimmen.
+                </p>
+<a class="inline-flex items-center space-x-2 bg-bronze-gold text-forest-green text-label-md font-label-md px-8 py-4 rounded-lg hover:bg-secondary-fixed transition-all hover:-translate-y-1 shadow-lg" href="#packages">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Pakete entdecken</span>
+</a>
+</div>
+</section>
+<!-- Packages Grid Section -->
+<section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop" id="packages">
+<div class="max-w-container-max mx-auto">
+<!-- Section Header -->
+<div class="text-center mb-16">
+<h2 class="text-headline-md font-headline-md text-forest-green mb-4">Unsere Reiseangebote</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl mx-auto">
+                        Jede Reise ist einzigartig. Entdecken Sie unsere sorgfältig zusammengestellten Pakete, die als Grundlage für Ihre individuelle Planung dienen.
+                    </p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 1: Economy Umrah -->
+<div class="group bg-surface-white rounded-xl overflow-hidden shadow-ambient hover:shadow-lg transition-all duration-300 flex flex-col border border-surface-container-high relative">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, bright, and modern hotel room interior in Medina, featuring simple but elegant Levantine decor. Soft, warm daylight streams through a window. The space feels comfortable, practical, and premium. Tones of warm beige, soft white, and subtle green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB50zAsGSWBTLQWyWUrBHWF34eBYrGj6CT3VCI4W8jOliaGk5UaONkuHV0IDXU6LIySiYpYQyEnuTa4MrH84euXGQFknljRsYsSlUcWaMmcj09ag1KAGcI5Heb6RW7dN9ebreOG3ilEaLIDtGQtQMf8LufuqJTn9x-ViDoMynyetq-44izpZ0IlV-YUlZacNvFM1KkoVEwmC88VWPp4IN9Ewo2Mq9SNuS7M2L6c-Gd7s_9rAyL9v032KMk3Cqr4lIWNilVS0_TuiFA"/>
+<div class="absolute top-4 right-4 bg-surface-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-bronze-gold icon-fill">calendar_month</span>
+<span class="text-label-sm font-label-sm text-forest-green">10 - 14 Tage</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="mb-6 flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-forest-green mb-2">Economy Umrah</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Eine würdevolle und komfortable Reise, die sich auf das Wesentliche konzentriert. Ideal für bewusste Reisende.</p>
+<ul class="space-y-3">
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">flight_takeoff</span>
+<span>Linienflug (Economy Class)</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">hotel</span>
+<span>3-Sterne Hotel in direkter Nähe</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">directions_bus</span>
+<span>Sämtliche Transfers vor Ort</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">support_agent</span>
+<span>Persönliche Reiseberatung</span>
+</li>
+</ul>
+</div>
+<button class="w-full bg-surface-container-low border border-outline-variant text-forest-green text-label-md font-label-md py-3.5 rounded-lg hover:bg-forest-green hover:text-surface-white hover:border-forest-green transition-colors flex justify-center items-center space-x-2" onclick="location.href='beratung.html'">
+<span>Paket auswählen &amp; Beratung buchen</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Komfort Umrah -->
+<div class="group bg-surface-white rounded-xl overflow-hidden shadow-ambient hover:shadow-lg transition-all duration-300 flex flex-col border border-surface-container-high relative">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-bronze-gold to-secondary-fixed z-10"></div>
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated, high-end lounge area in a luxury hotel in Mecca. The interior features rich textures, subtle Arabic geometric patterns on wood paneling, and plush seating. Warm ambient lighting creates an elegant, exclusive atmosphere. Tones of bronze, forest green, and deep charcoal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD93jxcoOqDdonEgVnov70PbbaSfS5gofwnnAHBYfSgzVJPsR_GIuXdPYqU_IWh_Z-LiMgpiQNC-dWyX7PQIIVVyCPetxnXj0zt_Ev5xHQwycqEke5GBc7KFYFaXiYyFYf5iiIA4X0mA0zPa8eFBlBwIUp3yiHgpR6rDu4qRujdTHiozO7R7pL_9o-bJNgZfjWtMC5koq-890r0om2B0zCEPoXxVnenha_3Fo3IXGoJZcQ9Fl-vX7QGeN50CgbISvYyxDn-wnz7MsE"/>
+<div class="absolute top-4 right-4 bg-surface-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-bronze-gold icon-fill">calendar_month</span>
+<span class="text-label-sm font-label-sm text-forest-green">10 - 14 Tage</span>
+</div>
+<!-- Badge -->
+<div class="absolute top-4 left-4 bg-bronze-gold text-surface-white px-3 py-1 rounded text-label-sm font-label-sm shadow-sm">
+                                Bestseller
+                            </div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="mb-6 flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-forest-green mb-2">Komfort Umrah</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Erhöhter Komfort und ausgewählte Unterkünfte für ein entspanntes und tiefgreifendes spirituelles Erlebnis.</p>
+<ul class="space-y-3">
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">flight_takeoff</span>
+<span>Premium Linienflug</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">hotel</span>
+<span>4-Sterne Hotel (kurze Wege)</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">directions_car</span>
+<span>Private Transfers inklusive</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">support_agent</span>
+<span>Intensive Reisebegleitung</span>
+</li>
+</ul>
+</div>
+<button class="w-full bg-forest-green text-surface-white text-label-md font-label-md py-3.5 rounded-lg hover:bg-charcoal transition-colors flex justify-center items-center space-x-2 shadow-md hover:shadow-lg" onclick="location.href='beratung.html'">
+<span>Paket auswählen &amp; Beratung buchen</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Premium Umrah -->
+<div class="group bg-charcoal rounded-xl overflow-hidden shadow-ambient hover:shadow-2xl transition-all duration-300 flex flex-col border border-tertiary-container relative text-surface-white md:col-span-2 lg:col-span-1">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute inset-0 bg-charcoal/20 z-10 mix-blend-multiply"></div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A breathtaking view from an opulent, ultra-luxury suite overlooking the Grand Mosque. Exquisite Levantine-inspired interior design with high-end marble and dark wood finishes. Soft glowing light from ornate lamps. Deep forest greens, striking bronze gold accents, projecting utmost exclusivity and serenity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANyuQIdZSyHqxa25fxhGHu1NUpc6aHk9iBuMQ1Zv6f-vFT1JtI58YJ91dakVq8NAsVkGd10ZGOHa4TVznK7szz617fzwxKELd18daWYjk70se-diiYJbJp1X40EvA2jl__X0DFROypnmAPtjYH6X-RH133elbBnnKsAmvT9LJADIWTQVrDm4NIS8AFGDElQyctPgQA-lrNeiiNE1AB1WEIaNXbAOOiyvhdhmHCLCxAap4xIE_sKbhTMWNIdqRYd1C--NLuXBpR_Tg"/>
+<div class="absolute top-4 right-4 bg-charcoal/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-sm border border-tertiary z-20">
+<span class="material-symbols-outlined text-[16px] text-bronze-gold icon-fill">calendar_month</span>
+<span class="text-label-sm font-label-sm text-surface-white">14+ Tage</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow relative z-20">
+<div class="mb-6 flex-grow">
+<div class="flex items-center space-x-2 mb-2">
+<span class="material-symbols-outlined text-bronze-gold text-[20px]">diamond</span>
+<h3 class="text-headline-sm font-headline-sm text-surface-white">Premium Umrah</h3>
+</div>
+<p class="text-body-md font-body-md text-surface-variant mb-6">Absolute Exklusivität und erstklassiger Service auf höchstem Niveau. Für unvergleichliche Ruhe und Fokus.</p>
+<ul class="space-y-3">
+<li class="flex items-start space-x-3 text-body-md font-body-md text-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">flight_takeoff</span>
+<span>Business Class Flug optional</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">hotel</span>
+<span>5-Sterne Luxushotel (Haramblick)</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">minor_crash</span>
+<span>VIP Chauffeur Service</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">support_agent</span>
+<span>24/7 Concierge &amp; Gelehrtenbegleitung</span>
+</li>
+</ul>
+</div>
+<button class="w-full bg-bronze-gold text-forest-green text-label-md font-label-md py-3.5 rounded-lg hover:bg-secondary-fixed transition-colors flex justify-center items-center space-x-2" onclick="location.href='beratung.html'">
+<span>Paket auswählen &amp; Beratung buchen</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Gruppen-Pilgerreise -->
+<div class="group bg-surface-white rounded-xl overflow-hidden shadow-ambient hover:shadow-lg transition-all duration-300 flex flex-col border border-surface-container-high relative md:col-span-2 lg:col-span-1">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A small, elegant group of travelers gathered in a beautiful, sunlit courtyard featuring subtle Islamic architectural arches. Warm, inviting atmosphere with soft natural lighting filtering through greenery. The scene conveys a sense of community, shared spiritual journey, and premium Levantine hospitality. Warm neutral colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADo0GCN5CG675x0I1daz_50RXXlZ5dobVLW2AHnqKZaLJf821MndPq15pSVhnl6gkxU85wrjWtJSqi7MhvNIBIeOBp64BP2r-5YBwGfq90SUV03GpIxhzGlDjfyA9jdhgcqJRDvFfSfjCMZAokx1-tlYlHGFGU3uT8tnK97q10EfgRnlqSMwTNf9djNcqOxmlE3mwZbxknKSQGi5X7PXZ5JI_IRkUqyZ0ie3efHKwPLYyqNuZaI8sdd7_0sVuiP1C_aJm4Aw-tP0E"/>
+<div class="absolute top-4 right-4 bg-surface-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-bronze-gold icon-fill">calendar_month</span>
+<span class="text-label-sm font-label-sm text-forest-green">Feste Termine</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="mb-6 flex-grow">
+<h3 class="text-headline-sm font-headline-sm text-forest-green mb-2">Gruppen-Pilgerreise</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Erleben Sie die Reise in einer Gemeinschaft Gleichgesinnter, geführt von erfahrenen Reiseleitern.</p>
+<ul class="space-y-3">
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">group</span>
+<span>Gemeinsame An- und Abreise</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">hotel</span>
+<span>Ausgewählte Gruppenhotels</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">directions_bus</span>
+<span>Organisierte Ausflüge &amp; Transfers</span>
+</li>
+<li class="flex items-start space-x-3 text-body-md font-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-bronze-gold mt-0.5">menu_book</span>
+<span>Begleitung durch Imame / Gelehrte</span>
+</li>
+</ul>
+</div>
+<button class="w-full bg-surface-container-low border border-outline-variant text-forest-green text-label-md font-label-md py-3.5 rounded-lg hover:bg-forest-green hover:text-surface-white hover:border-forest-green transition-colors flex justify-center items-center space-x-2" onclick="location.href='beratung.html'">
+<span>Paket auswählen &amp; Beratung buchen</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<div class="h-px w-full bg-gradient-to-r from-transparent via-bronze-gold/30 to-transparent"></div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-forest-green full-width flat no shadows">
+<div class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<!-- Brand -->
+<div>
+<a class="text-headline-sm font-headline-sm font-bold text-surface-white block mb-4" href="index.html">
+                    Yorika Travel
+                </a>
+<p class="text-label-sm font-label-sm text-surface-white/80">
+                    © 2024 Yorika Travel. Alle Rechte vorbehalten.
+                </p>
+</div>
+<!-- Links -->
+<div class="flex flex-wrap gap-6 md:gap-8">
+<a class="text-label-sm font-label-sm text-surface-white/80 hover:text-bronze-gold transition-colors duration-200" href="#">Impressum</a>
+<a class="text-label-sm font-label-sm text-surface-white/80 hover:text-bronze-gold transition-colors duration-200" href="#">Datenschutz</a>
+<a class="text-label-sm font-label-sm text-surface-white/80 hover:text-bronze-gold transition-colors duration-200" href="#">Instagram</a>
+<a class="text-label-sm font-label-sm text-surface-white/80 hover:text-bronze-gold transition-colors duration-200" href="#">Facebook</a>
+</div>
+</div>
+</footer>
+</body></html>
