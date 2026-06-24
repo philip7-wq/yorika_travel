@@ -189,6 +189,7 @@
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c5a059' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
     </style>
+<link rel="stylesheet" href="lang.css"/>
 </head>
 <body class="bg-warm-beige text-on-surface antialiased font-body-md text-body-md selection:bg-bronze-gold selection:text-surface-white">
 <!-- TopNavBar -->
@@ -200,16 +201,28 @@
             </a>
 <!-- Desktop Navigation -->
 <ul class="hidden md:flex space-x-8 items-center">
-<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="index.html">Startseite</a></li>
-<li><a class="text-forest-green dark:text-inverse-primary border-b-2 border-bronze-gold pb-1 font-bold text-label-md font-label-md scale-95 transition-transform duration-150" href="ueber-uns.html">Über uns</a></li>
-<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="reiseangebote.html">Reiseangebote</a></li>
-<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="pilgerreisen.html">Pilgerreisen &amp; Umrah</a></li>
-<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="kontakt.html">Kontakt</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="index.html" data-i18n="nav.home">Startseite</a></li>
+<li><a class="text-forest-green dark:text-inverse-primary border-b-2 border-bronze-gold pb-1 font-bold text-label-md font-label-md scale-95 transition-transform duration-150" href="ueber-uns.html" data-i18n="nav.about">Über uns</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="reiseangebote.html" data-i18n="nav.offers">Reiseangebote</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="pilgerreisen.html" data-i18n="nav.pilgrimage">Pilgerreisen &amp; Umrah</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200 text-label-md font-label-md" href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
 </ul>
 <!-- Actions -->
 <div class="hidden md:flex items-center space-x-4">
-<button class="text-label-md font-label-md text-on-surface-variant hover:text-bronze-gold transition-colors duration-200" onclick="alert('Englische Version folgt demnächst.')" onclick="alert('Englische Version folgt demnächst.')">DE / EN</button>
-<a class="bg-forest-green text-surface-white text-label-md font-label-md px-6 py-2.5 rounded hover:bg-forest-green/90 transition-colors shadow-[0_4px_12px_rgba(27,48,34,0.15)] hover:shadow-[0_6px_16px_rgba(27,48,34,0.2)]" href="beratung.html">Beratung buchen</a>
+<div class="lang-switcher" data-lang-switcher>
+<button type="button" class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wählen">
+<span class="material-symbols-outlined text-[20px]">language</span>
+<span data-lang-current>DE</span>
+<span class="material-symbols-outlined text-[18px] lang-chevron">expand_more</span>
+</button>
+<div class="lang-menu" role="menu">
+<button type="button" class="lang-option" data-lang="de" role="menuitem"><span class="lang-code">DE</span><span class="lang-name">Deutsch</span><span class="material-symbols-outlined lang-check">check</span></button>
+<button type="button" class="lang-option" data-lang="en" role="menuitem"><span class="lang-code">EN</span><span class="lang-name">English</span><span class="material-symbols-outlined lang-check">check</span></button>
+<button type="button" class="lang-option" data-lang="ar" role="menuitem"><span class="lang-code">AR</span><span class="lang-name">العربية</span><span class="material-symbols-outlined lang-check">check</span></button>
+<button type="button" class="lang-option" data-lang="tr" role="menuitem"><span class="lang-code">TR</span><span class="lang-name">Türkçe</span><span class="material-symbols-outlined lang-check">check</span></button>
+</div>
+</div>
+<a class="bg-forest-green text-surface-white text-label-md font-label-md px-6 py-2.5 rounded hover:bg-forest-green/90 transition-colors shadow-[0_4px_12px_rgba(27,48,34,0.15)] hover:shadow-[0_6px_16px_rgba(27,48,34,0.2)]" href="beratung.html" data-i18n="cta.book">Beratung buchen</a>
 </div>
 <!-- Mobile Menu Toggle -->
 <button class="md:hidden text-forest-green">
@@ -314,4 +327,5 @@
 </ul>
 </div>
 </footer>
+<script src="lang.js"></script>
 </body></html>

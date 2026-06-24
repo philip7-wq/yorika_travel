@@ -1,0 +1,26 @@
+/* Yorika Language Switcher */
+[data-lang-switcher]{position:relative}
+.lang-trigger{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .7rem;border-radius:.5rem;
+  font-size:14px;font-weight:600;color:#1B3022;background:transparent;border:1px solid transparent;
+  cursor:pointer;transition:background-color .2s,border-color .2s,color .2s}
+.lang-trigger:hover{background:#F5F2ED;border-color:rgba(197,160,89,.35)}
+.lang-trigger .lang-chevron{transition:transform .25s ease}
+[data-lang-switcher].open .lang-trigger{background:#F5F2ED;border-color:rgba(197,160,89,.45)}
+[data-lang-switcher].open .lang-chevron{transform:rotate(180deg)}
+.lang-menu{position:absolute;top:calc(100% + .5rem);right:0;min-width:11rem;background:#fff;
+  border:1px solid #F0EDED;border-radius:.75rem;box-shadow:0 12px 34px rgba(27,48,34,.16);
+  padding:.35rem;z-index:60;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);
+  transform-origin:top right;transition:opacity .2s ease,transform .2s ease,visibility .2s}
+[data-lang-switcher].open .lang-menu{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.lang-option{display:flex;align-items:center;gap:.7rem;width:100%;padding:.55rem .7rem;border-radius:.5rem;
+  background:transparent;border:0;cursor:pointer;text-align:left;font-size:14px;color:#434843;transition:background-color .15s,color .15s}
+.lang-option:hover{background:#F5F2ED;color:#1B3022}
+.lang-option .lang-code{width:26px;font-weight:700;color:#C5A059;flex-shrink:0}
+.lang-option .lang-name{flex:1}
+.lang-option .lang-check{font-size:18px;color:#1B3022;opacity:0;transition:opacity .15s}
+.lang-option.active{background:#F5F2ED}
+.lang-option.active .lang-name{color:#1B3022;font-weight:600}
+.lang-option.active .lang-check{opacity:1}
+/* RTL */
+html[dir="rtl"] .lang-menu{right:auto;left:0;transform-origin:top left}
+html[dir="rtl"] .lang-option{text-align:right}

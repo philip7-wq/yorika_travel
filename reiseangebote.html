@@ -115,6 +115,7 @@
             box-shadow: 0 8px 30px rgba(27, 48, 34, 0.08);
         }
     </style>
+<link rel="stylesheet" href="lang.css"/>
 </head>
 <body class="bg-warm-beige text-charcoal font-body-md antialiased min-h-screen flex flex-col">
 <!-- TopNavBar Shared Component -->
@@ -126,17 +127,29 @@
             </a>
 <!-- Navigation Links (Desktop) -->
 <nav class="hidden md:flex gap-8 items-center">
-<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="index.html">Startseite</a>
-<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="ueber-uns.html">Über uns</a>
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="index.html" data-i18n="nav.home">Startseite</a>
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
 <!-- Active Navigation Item -->
-<a aria-current="page" class="text-forest-green border-b-2 border-bronze-gold pb-1 font-bold hover:text-bronze-gold transition-colors duration-200" href="reiseangebote.html">Reiseangebote</a>
-<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="pilgerreisen.html">Pilgerreisen &amp; Umrah</a>
-<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="kontakt.html">Kontakt</a>
+<a aria-current="page" class="text-forest-green border-b-2 border-bronze-gold pb-1 font-bold hover:text-bronze-gold transition-colors duration-200" href="reiseangebote.html" data-i18n="nav.offers">Reiseangebote</a>
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="pilgerreisen.html" data-i18n="nav.pilgrimage">Pilgerreisen &amp; Umrah</a>
+<a class="text-on-surface-variant font-medium hover:text-bronze-gold transition-colors duration-200" href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </nav>
 <!-- Trailing Actions -->
 <div class="flex items-center gap-6">
-<span class="hidden lg:block text-label-md font-label-md text-forest-green cursor-pointer hover:text-bronze-gold transition-colors duration-200" style="cursor:pointer" onclick="alert('Englische Version folgt demnächst.')">DE / EN</span>
-<a class="bg-forest-green text-surface-white px-6 py-2.5 rounded-DEFAULT text-label-md font-label-md hover:bg-forest-green/90 transition-colors duration-200" href="beratung.html">
+<div class="lang-switcher" data-lang-switcher>
+<button type="button" class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Sprache wählen">
+<span class="material-symbols-outlined text-[20px]">language</span>
+<span data-lang-current>DE</span>
+<span class="material-symbols-outlined text-[18px] lang-chevron">expand_more</span>
+</button>
+<div class="lang-menu" role="menu">
+<button type="button" class="lang-option" data-lang="de" role="menuitem"><span class="lang-code">DE</span><span class="lang-name">Deutsch</span><span class="material-symbols-outlined lang-check">check</span></button>
+<button type="button" class="lang-option" data-lang="en" role="menuitem"><span class="lang-code">EN</span><span class="lang-name">English</span><span class="material-symbols-outlined lang-check">check</span></button>
+<button type="button" class="lang-option" data-lang="ar" role="menuitem"><span class="lang-code">AR</span><span class="lang-name">العربية</span><span class="material-symbols-outlined lang-check">check</span></button>
+<button type="button" class="lang-option" data-lang="tr" role="menuitem"><span class="lang-code">TR</span><span class="lang-name">Türkçe</span><span class="material-symbols-outlined lang-check">check</span></button>
+</div>
+</div>
+<a class="bg-forest-green text-surface-white px-6 py-2.5 rounded-DEFAULT text-label-md font-label-md hover:bg-forest-green/90 transition-colors duration-200" href="beratung.html" data-i18n="cta.book">
                     Beratung buchen
                 </a>
 </div>
@@ -280,4 +293,5 @@
 </nav>
 </div>
 </footer>
+<script src="lang.js"></script>
 </body></html>
