@@ -118,6 +118,21 @@
         .material-symbols-outlined.fill {
             font-variation-settings: 'FILL' 1;
         }
+        /* Partner-Logo-Laufanimation (Marquee) */
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); } /* exakt eine Hälfte = nahtlose Schleife */
+        }
+        @media (prefers-reduced-motion: no-preference) {
+            .marquee-track { animation: marquee 35s linear infinite; }
+        }
+        .marquee:hover .marquee-track { animation-play-state: paused; }
+        .marquee {
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+            mask-image:         linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+        }
+        .marquee-logo { filter: grayscale(100%); opacity: .55; transition: filter .3s, opacity .3s; }
+        .marquee-logo:hover { filter: grayscale(0); opacity: 1; }
     </style>
 <link rel="stylesheet" href="lang.css"/>
 </head>
@@ -218,6 +233,34 @@
 </div>
 </div>
 </section>
+<!-- Partner Logos Marquee -->
+<section class="bg-warm-beige pt-16 pb-4 overflow-hidden" aria-label="In Zusammenarbeit mit unseren Partnern">
+<p class="text-center text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-8">
+                In Zusammenarbeit mit
+            </p>
+<div class="marquee relative w-full">
+<div class="marquee-track flex items-center gap-16 md:gap-24 w-max">
+<!-- Hälfte 1 (sichtbar, mit alt-Texten) -->
+<img src="logos/Emirates_logo.svg.png" alt="Emirates" class="marquee-logo h-14 md:h-16 w-auto object-contain shrink-0"/>
+<img src="logos/Lufthansa_Logo_2018.svg.png" alt="Lufthansa" class="marquee-logo h-7 md:h-8 w-auto object-contain shrink-0"/>
+<img src="logos/SMG_LOGO_RGB.png" alt="Schmetterling" class="marquee-logo h-9 md:h-10 w-auto object-contain shrink-0"/>
+<img src="logos/Turkish_Airlines_logo_2019_compact.svg.png" alt="Turkish Airlines" class="marquee-logo h-10 md:h-12 w-auto object-contain shrink-0"/>
+<img src="logos/Emirates_logo.svg.png" alt="Emirates" class="marquee-logo h-14 md:h-16 w-auto object-contain shrink-0"/>
+<img src="logos/Lufthansa_Logo_2018.svg.png" alt="Lufthansa" class="marquee-logo h-7 md:h-8 w-auto object-contain shrink-0"/>
+<img src="logos/SMG_LOGO_RGB.png" alt="Schmetterling" class="marquee-logo h-9 md:h-10 w-auto object-contain shrink-0"/>
+<img src="logos/Turkish_Airlines_logo_2019_compact.svg.png" alt="Turkish Airlines" class="marquee-logo h-10 md:h-12 w-auto object-contain shrink-0"/>
+<!-- Hälfte 2 (exakte Kopie für nahtlosen Loop, für Screenreader ausgeblendet) -->
+<img src="logos/Emirates_logo.svg.png" alt="" aria-hidden="true" class="marquee-logo h-14 md:h-16 w-auto object-contain shrink-0"/>
+<img src="logos/Lufthansa_Logo_2018.svg.png" alt="" aria-hidden="true" class="marquee-logo h-7 md:h-8 w-auto object-contain shrink-0"/>
+<img src="logos/SMG_LOGO_RGB.png" alt="" aria-hidden="true" class="marquee-logo h-9 md:h-10 w-auto object-contain shrink-0"/>
+<img src="logos/Turkish_Airlines_logo_2019_compact.svg.png" alt="" aria-hidden="true" class="marquee-logo h-10 md:h-12 w-auto object-contain shrink-0"/>
+<img src="logos/Emirates_logo.svg.png" alt="" aria-hidden="true" class="marquee-logo h-14 md:h-16 w-auto object-contain shrink-0"/>
+<img src="logos/Lufthansa_Logo_2018.svg.png" alt="" aria-hidden="true" class="marquee-logo h-7 md:h-8 w-auto object-contain shrink-0"/>
+<img src="logos/SMG_LOGO_RGB.png" alt="" aria-hidden="true" class="marquee-logo h-9 md:h-10 w-auto object-contain shrink-0"/>
+<img src="logos/Turkish_Airlines_logo_2019_compact.svg.png" alt="" aria-hidden="true" class="marquee-logo h-10 md:h-12 w-auto object-contain shrink-0"/>
+</div>
+</div>
+</section>
 <!-- Feature Cards / Categories Bento Grid -->
 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="angebote">
 <div class="text-center mb-16">
@@ -275,6 +318,63 @@
 <p class="font-body-md text-body-md text-on-surface-variant mb-6">Weltweite Buchungen zu Top-Konditionen. Wir finden die besten Verbindungen.</p>
 <span class="text-bronze-gold font-label-md text-label-md uppercase border-b border-bronze-gold pb-0.5">Anfragen</span>
 </a>
+</div>
+</section>
+<!-- Google Reviews / Kundenstimmen -->
+<section class="bg-warm-beige py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<!-- Kopf: Überschrift + Gold-Strich + Google-Badge -->
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-forest-green mb-4">Das sagen unsere Kunden</h2>
+<div class="w-24 h-1 bg-bronze-gold mx-auto rounded-full mb-6"></div>
+<div class="inline-flex items-center gap-3 bg-surface-white rounded-full py-2.5 px-5 shadow-[0_4px_20px_rgba(27,48,34,0.06)]">
+<svg class="h-6 w-6" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+<span class="font-label-md text-label-md text-forest-green">Google Bewertungen</span>
+<span class="flex text-bronze-gold"><span class="material-symbols-outlined fill text-lg">star</span><span class="material-symbols-outlined fill text-lg">star</span><span class="material-symbols-outlined fill text-lg">star</span><span class="material-symbols-outlined fill text-lg">star</span><span class="material-symbols-outlined fill text-lg">star</span></span>
+</div>
+</div>
+<!-- 3 Bewertungskarten -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Karte 1: Noah Shammo -->
+<div class="bg-surface-white rounded-xl p-8 shadow-[0_4px_20px_rgba(27,48,34,0.08)] flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-forest-green text-surface-white flex items-center justify-center font-headline-sm text-headline-sm shrink-0">N</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-forest-green font-bold">Noah Shammo</p>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Google Rezension</p>
+</div>
+<svg class="h-5 w-5 shrink-0" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+</div>
+<div class="flex gap-0.5 text-bronze-gold mb-3" aria-label="5 von 5 Sternen"><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span></div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">„Guter Service und netter Umgang mit Kunden"</p>
+</div>
+<!-- Karte 2: Watheq Tareq -->
+<div class="bg-surface-white rounded-xl p-8 shadow-[0_4px_20px_rgba(27,48,34,0.08)] flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-bronze-gold text-forest-green flex items-center justify-center font-headline-sm text-headline-sm shrink-0">W</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-forest-green font-bold">Watheq Tareq</p>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Google Rezension</p>
+</div>
+<svg class="h-5 w-5 shrink-0" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+</div>
+<div class="flex gap-0.5 text-bronze-gold mb-3" aria-label="5 von 5 Sternen"><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span></div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">„Beste Angebote … ich kaufe meine Tickets immer bei Yorika."</p>
+</div>
+<!-- Karte 3: Lenuta Dragomir -->
+<div class="bg-surface-white rounded-xl p-8 shadow-[0_4px_20px_rgba(27,48,34,0.08)] flex flex-col">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full bg-on-primary-container text-surface-white flex items-center justify-center font-headline-sm text-headline-sm shrink-0">L</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md text-forest-green font-bold">Lenuta Dragomir</p>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Google Rezension</p>
+</div>
+<svg class="h-5 w-5 shrink-0" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+</div>
+<div class="flex gap-0.5 text-bronze-gold mb-3" aria-label="5 von 5 Sternen"><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span><span class="material-symbols-outlined fill text-xl">star</span></div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">„Sehr Freundliche Leute"</p>
+</div>
+</div>
 </div>
 </section>
 </main>
