@@ -133,24 +133,29 @@
         }
         .marquee-logo { filter: grayscale(100%); opacity: .55; transition: filter .3s, opacity .3s; }
         .marquee-logo:hover { filter: grayscale(0); opacity: 1; }
+        /* Sprachumschalter auf grüner Navi (nur Startseite) */
+        .nav-green .lang-trigger { color: #fff; }
+        .nav-green .lang-trigger:hover,
+        .nav-green [data-lang-switcher].open .lang-trigger { background: rgba(255,255,255,.12); border-color: rgba(197,160,89,.45); }
     </style>
 <link rel="stylesheet" href="lang.css"/>
 </head>
 <body class="bg-warm-beige text-on-background font-body-md text-body-md antialiased selection:bg-bronze-gold/30">
 <!-- TopNavBar -->
-<nav class="bg-surface-white dark:bg-charcoal shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<nav class="nav-green bg-forest-green shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
 <!-- Brand -->
-<a class="text-headline-sm font-headline-sm font-bold text-forest-green dark:text-inverse-primary tracking-tight" href="index.html">
+<a class="text-headline-sm font-headline-sm font-bold text-surface-white tracking-tight flex items-center gap-2" href="index.html">
+<img src="image/yr-logo.svg" alt="" class="h-10 w-10 shrink-0"/>
                 Yorika Travel
             </a>
 <!-- Navigation Links (Desktop) -->
 <div class="hidden md:flex space-x-8 items-center">
-<a class="text-forest-green dark:text-inverse-primary border-b-2 border-bronze-gold pb-1 font-bold text-label-md font-label-md transition-transform duration-150 scale-95" href="index.html" data-i18n="nav.home">Startseite</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="reiseangebote.html" data-i18n="nav.offers">Reiseangebote</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="pilgerreisen.html" data-i18n="nav.pilgrimage">Pilgerreisen &amp; Umrah</a>
-<a class="text-on-surface-variant dark:text-surface-variant font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
+<a class="text-surface-white border-b-2 border-bronze-gold pb-1 font-bold text-label-md font-label-md transition-transform duration-150 scale-95" href="index.html" data-i18n="nav.home">Startseite</a>
+<a class="text-surface-white/80 font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="ueber-uns.html" data-i18n="nav.about">Über uns</a>
+<a class="text-surface-white/80 font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="reiseangebote.html" data-i18n="nav.offers">Reiseangebote</a>
+<a class="text-surface-white/80 font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="pilgerreisen.html" data-i18n="nav.pilgrimage">Pilgerreisen &amp; Umrah</a>
+<a class="text-surface-white/80 font-medium text-label-md font-label-md hover:text-bronze-gold dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="kontakt.html" data-i18n="nav.contact">Kontakt</a>
 </div>
 <!-- Actions -->
 <div class="flex items-center space-x-4">
@@ -167,11 +172,11 @@
 <button type="button" class="lang-option" data-lang="tr" role="menuitem"><span class="lang-code">TR</span><span class="lang-name">Türkçe</span><span class="material-symbols-outlined lang-check">check</span></button>
 </div>
 </div>
-<a class="bg-forest-green text-surface-white px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-[0_4px_12px_rgba(27,48,34,0.15)] hover:shadow-[0_6px_16px_rgba(27,48,34,0.2)]" href="beratung.html" data-i18n="cta.book">
+<a class="bg-bronze-gold text-forest-green px-6 py-2.5 rounded-lg text-label-md font-label-md hover:bg-secondary-fixed-dim transition-colors shadow-[0_4px_12px_rgba(27,48,34,0.15)] hover:shadow-[0_6px_16px_rgba(27,48,34,0.2)]" href="beratung.html" data-i18n="cta.book">
                     Beratung buchen
                 </a>
 <!-- Mobile Menu Toggle -->
-<button class="md:hidden text-forest-green">
+<button class="md:hidden text-surface-white">
 <span aria-hidden="true" class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
@@ -184,6 +189,8 @@
 <div class="bg-cover bg-center bg-no-repeat w-full h-full absolute inset-0" data-alt="A breathtaking, cinematic photograph of a grand Middle Eastern architectural archway framing a distant desert oasis at sunrise. The warm golden morning light bathes the intricate stone carvings and modern luxury elements, creating an atmosphere of prestigious travel, profound peace, and Levantine elegance. The color palette features rich earthy tones, soft glowing golds, and deep emerald greens. High-end editorial photography style." style="background-image: url('image/hero.webp')"></div>
 <!-- Subtle Overlay for text readability -->
 <div class="absolute inset-0 bg-gradient-to-t from-forest-green/90 via-forest-green/50 to-transparent"></div>
+<!-- Grüner Verlauf von oben: blendet die grüne Navi nahtlos ins Hero (dezent) -->
+<div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(27,48,34,0.85),rgba(27,48,34,0.15)_22%,transparent_45%)]"></div>
 </div>
 <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col items-center text-center mt-12 md:mt-0">
 <span class="inline-block py-1.5 px-4 mb-6 rounded-full bg-forest-green/70 backdrop-blur-md border border-bronze-gold/40 text-bronze-gold font-label-md text-label-md uppercase tracking-wider">
