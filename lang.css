@@ -24,3 +24,25 @@
 /* RTL */
 html[dir="rtl"] .lang-menu{right:auto;left:0;transform-origin:top left}
 html[dir="rtl"] .lang-option{text-align:right}
+
+/* Yorika Mobile Navigation (Hamburger) */
+.ymnav-toggle{display:inline-flex;align-items:center;justify-content:center;background:transparent;border:0;
+  cursor:pointer;padding:.25rem}
+.ymnav-toggle .material-symbols-outlined{font-size:30px}
+@media(min-width:768px){.ymnav-toggle{display:none!important}}
+/* Redundanten Header-CTA auf Mobile ausblenden (steckt im Panel) */
+@media(max-width:767px){.ymnav-hide-sm{display:none!important}}
+.ymnav-panel{position:fixed;top:5rem;left:0;right:0;z-index:55;background:#fff;border-top:1px solid #F0EDED;
+  box-shadow:0 16px 34px rgba(27,48,34,.16);padding:.5rem .5rem 1rem;display:flex;flex-direction:column;gap:.15rem;
+  max-height:calc(100vh - 5rem);overflow-y:auto;
+  opacity:0;visibility:hidden;transform:translateY(-10px);
+  transition:opacity .22s ease,transform .22s ease,visibility .22s}
+.ymnav-panel.open{opacity:1;visibility:visible;transform:translateY(0)}
+@media(min-width:768px){.ymnav-panel{display:none!important}}
+.ymnav-link{display:block;padding:.85rem 1rem;border-radius:.6rem;font-size:16px;font-weight:600;
+  color:#1B3022;text-decoration:none;transition:background-color .15s,color .15s}
+.ymnav-link:hover{background:#F5F2ED;color:#C5A059}
+.ymnav-link.active{background:#F5F2ED;color:#C5A059}
+.ymnav-cta{margin-top:.5rem;text-align:center;background:#1B3022;color:#fff}
+.ymnav-cta:hover{background:#1B3022;color:#fff;opacity:.92}
+html[dir="rtl"] .ymnav-link{text-align:right}
